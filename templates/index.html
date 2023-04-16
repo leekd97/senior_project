@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>index</title>
+
+    </head>
+    <body>
+        <script src="{{url_for('static',filename='js/camera.js')}}"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+        <table class="mainlayout">
+            <tbody>
+                <tr>
+                    <td colspan="2">
+                        <div id="first_div">아직 시작 전</div>
+                        <div id="second_div">
+                            <canvas id="canvas" style="overflow:auto"></canvas>
+<!--                            <img id="output_canvas" style="overflow:auto"></img>-->
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cam">
+                        <div id="btn_div"><button class="camera_on" id="cam_on" onclick="mainInit()">이경돈</button></div>
+                        <div id="video_div"><video id="cameraview" id="cam_screen" width="360" height="240"></video></div>
+                    </td>
+                    <td>
+                        <textarea class="logarea" id="logs" readonly></textarea>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
