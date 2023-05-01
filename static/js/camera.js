@@ -96,7 +96,6 @@ function addLogs(logObject){
 
 function applyCanvas(modelOutput){
     modelOutput = JSON.parse(modelOutput);
-//    document.getElementById("output_canvas").src = modelOutput.img_name;
     document.getElementById("second_div").style.backgroundImage = "url('"+modelOutput.img_name+"')";
     addLogs(modelOutput.log_info);
     captureImage()
